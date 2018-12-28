@@ -1,0 +1,29 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: root
+    password: 926718
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/basic_student?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+  redis:
+    database: 0
+    timeout: 100000
+    host: 127.0.0.1
+    port: 6379
+    password: 12345
+    pool:
+    max-active: 8
+    jedis:
+      pool:
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+
